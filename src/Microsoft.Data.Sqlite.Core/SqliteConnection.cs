@@ -8,7 +8,6 @@ using System.Data.Common;
 using System.Diagnostics;
 using System.IO;
 using Microsoft.Data.Sqlite.Properties;
-using Microsoft.Data.Sqlite.Utilities;
 using SQLitePCL;
 using static SQLitePCL.raw;
 
@@ -42,9 +41,6 @@ namespace Microsoft.Data.Sqlite
         private ConnectionState _state;
         private sqlite3 _db;
         private bool _extensionsEnabled;
-
-        static SqliteConnection()
-            => BundleInitializer.Initialize();
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="SqliteConnection" /> class.
